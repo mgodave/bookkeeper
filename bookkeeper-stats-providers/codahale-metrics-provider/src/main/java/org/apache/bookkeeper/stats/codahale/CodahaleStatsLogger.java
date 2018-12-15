@@ -32,7 +32,7 @@ public class CodahaleStatsLogger implements StatsLogger {
     protected final String basename;
     final MetricRegistry metrics;
 
-    CodahaleStatsLogger(MetricRegistry metrics, String basename) {
+    public CodahaleStatsLogger(MetricRegistry metrics, String basename) {
         this.metrics = metrics;
         this.basename = basename;
     }
