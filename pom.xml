@@ -152,7 +152,6 @@
     <mockito.version>3.0.0</mockito.version>
     <netty.version>4.1.32.Final</netty.version>
     <netty-boringssl.version>2.0.20.Final</netty-boringssl.version>
-    <ostrich.version>9.1.3</ostrich.version>
     <powermock.version>2.0.2</powermock.version>
     <prometheus.version>0.0.21</prometheus.version>
     <datasketches.version>0.8.3</datasketches.version>
@@ -167,7 +166,6 @@
     <spotbugs-annotations.version>3.1.8</spotbugs-annotations.version>
     <javax-annotations-api.version>1.3.2</javax-annotations-api.version>
     <testcontainers.version>1.8.3</testcontainers.version>
-    <twitter-server.version>1.29.0</twitter-server.version>
     <vertx.version>3.4.1</vertx.version>
     <zookeeper.version>3.4.13</zookeeper.version>
     <jctools.version>2.1.2</jctools.version>
@@ -540,17 +538,6 @@
 
       <!-- http server dependencies -->
       <dependency>
-        <groupId>com.twitter</groupId>
-        <artifactId>twitter-server_2.11</artifactId>
-        <version>${twitter-server.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
         <groupId>io.vertx</groupId>
         <artifactId>vertx-core</artifactId>
         <version>${vertx.version}</version>
@@ -630,13 +617,6 @@
         <groupId>com.yahoo.datasketches</groupId>
         <artifactId>sketches-core</artifactId>
         <version>${datasketches.version}</version>
-      </dependency>
-
-      <!-- ostrich -->
-      <dependency>
-        <groupId>com.twitter</groupId>
-        <artifactId>ostrich_2.9.2</artifactId>
-        <version>${ostrich.version}</version>
       </dependency>
 
       <!-- tools dependencies -->
@@ -899,7 +879,7 @@
             </group>
             <group>
               <title>Bookkeeper Stats Providers</title>
-              <packages>org.apache.bookkeeper.stats.codahale:org.apache.bookkeeper.stats.twitter.finagle:org.apache.bookkeeper.stats.twitter.ostrich:org.apache.bookkeeper.stats.twitter.science:org.apache.bookkeeper.stats.prometheus</packages>
+              <packages>org.apache.bookkeeper.stats.codahale:org.apache.bookkeeper.stats.prometheus</packages>
             </group>
           </groups>
           <doctitle>BookKeeper Java API (version ${project.version})</doctitle>
